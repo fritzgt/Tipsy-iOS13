@@ -29,6 +29,21 @@ class ViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func tipChanged(_ sender: UIButton) {
+        let selectedTip = sender.currentTitle
+        zeroPctButton.isSelected = false
+        tenPctButton.isSelected = false
+        twentyPctButton.isSelected = false
+        
+        switch selectedTip {
+        case "0%":
+            zeroPctButton.isSelected = true
+        case "10%":
+            tenPctButton.isSelected = true
+        case "20%":
+            twentyPctButton.isSelected = true
+        default:
+            break
+        }
     }
     
     @IBAction func stepperValuChanged(_ sender: UIStepper) {
